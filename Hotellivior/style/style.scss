@@ -1,0 +1,373 @@
+@charset "UTF-8";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    
+
+}
+/*
+
+.social{
+    width: 100%;
+    margin: 0 auto;
+    background-color: gray;
+}
+
+.social-png{
+    text-decoration: none;
+
+    svg{
+        cursor: pointer;
+        width: 25px;
+        path, circle{
+            fill: rgb(255, 255, 255);
+            transition: .7s ease;
+        }
+        &:hover{
+            path,circle{
+                fill: rgb(197, 17, 197);
+                margin-bottom: 15px;
+            }
+        }
+    }
+}*/
+
+nav.menu{
+    width: 100%;
+    background-color: rgb(233, 233, 233);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.404);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+    transition: 1s ease;
+
+
+}
+div.logo{
+    h2{
+        font-weight: lighter;
+        color: rgb(139, 43, 139);
+        transition: 1s ease;
+    }
+}
+div.nav-munu{
+    ul{
+        display: flex;
+        list-style: none;
+        
+        li{
+            a{
+                text-transform: uppercase;
+                text-decoration: none;
+                color: rgb(117, 117, 117);
+                padding: 10px;
+                transition: .3s ease;
+            }
+            a:hover{
+                background-color: rgb(139, 43, 139);  
+                color: white;              
+            }
+        }
+    }
+
+}
+
+
+.bx{
+    display: none;
+}
+.sub-menu{
+    display: none;
+}
+section.paisagem{
+    width: 100%;
+    height: 80%;
+    background-color: red;
+    background-image: url("../imagens/cancun.jpg");
+    background-position: center center;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.39);
+
+    &::before{
+        content: 'Cancún';
+        position: absolute;
+        color: white;
+        font-size: 4em;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+
+@media (max-width: 920px){
+    .social{
+        display: none;
+    }
+    .nav-munu{
+        display: none;
+    }
+    nav.menu{
+        width: 100%;
+    }
+
+
+    .bx {
+        display: block;
+        width: 50px;
+        height: 50px;
+        position: relative;
+        cursor: pointer;
+    
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 57%;
+            left: 12%;
+            width: 75%;
+            height: 2px;
+            border-radius: 2px;
+            background-color: rgb(139, 43, 139);
+            transition: 1s ease;
+          }
+    
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 33%;
+            left: 12%;
+            width: 75%;
+            height: 2px;
+            border-radius: 2px;
+            background-color: rgb(139, 43, 139);
+            transition: 1s ease;
+          }
+    }
+
+    section.paisagem{
+        box-sizing: 1px 1px solid black;
+    }
+    
+
+    
+      .sub-menu{
+        display: block;
+        position: absolute;
+        width: 100%;
+        background-color: rgb(139, 43, 139);
+        z-index: 999;
+        top: -100%;
+        transition: 1s ease;
+      }
+
+      .nav-menu-mobile{
+        list-style: none;
+        padding: 10px;
+        line-height: 50px;
+        font-size: 1.5em;
+    
+    
+        li{
+            border-top: 1px solid #ccc;
+        }
+    
+        a{
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            font-weight: lighter;
+    
+    
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+      }
+
+      .sub-menu.active{
+        top: 13%;
+    }
+    .menu.active{
+        background-color: rgb(77, 22, 77);
+    
+        h2{
+            color: white;
+        }
+    }
+    
+    .bx-active::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 55%;
+        left: 15%;
+        width: 75%;
+        height: 2px;
+        border-radius: 2px;
+        background-color: rgb(255, 255, 255);
+        transform: rotate(220deg);
+        
+      }
+      
+      .bx-active::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 57%;
+        left: 12%;
+        width: 75%;
+        height: 2px;
+        border-radius: 2px;
+        background-color: rgb(255, 255, 255);
+        transform: rotate(-220deg);
+      }
+
+    
+}
+
+
+
+section.text-one{
+    background-color: rgb(139, 43, 139);
+    color: #ccc;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.322);
+}
+
+section.hoteis{
+    width: 100%;
+    background-color: rgb(233, 233, 233);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    align-items: center; 
+    justify-content: center
+}
+
+div.images-hotel{
+    width: 550px;
+    height: 300px;
+    background-color: white;
+    margin: 10px;
+
+}
+
+.text-hotel{
+    display: flex;
+    width: 100%;
+    background-color: rgb(139, 43, 139);
+    color: white;
+    height: 30px;
+    align-items: center;
+    padding: 0 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.322);
+}
+
+.img-hotel-nav{
+    height: 270px;
+    background-color: red;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+   
+}
+
+#hotel1{
+    background-image: url("../imagens/hotel1.jpg");
+}
+#hotel2{
+    background-image: url("../imagens/hotel2.jpg");
+}
+#hotel3{
+    background-image: url("../imagens/hotel3.jpg");
+}
+#hotel4{
+    background-image: url("../imagens/hotel4.jpg");
+}
+
+section.text-two{
+    background-color: rgb(139, 43, 139);
+    color: #ccc;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.322);
+}
+
+
+.pq-nos{
+    width: 100%;
+    background-color: /*rgb(109, 36, 109)*/ rgb(233, 233, 233);
+    border-top: 1px solid black;
+    border-top: 1px solid rgba(0, 0, 0, 0.212);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    align-items: center; 
+    justify-content: center
+    
+}
+
+.mt{
+    width: 300px;
+    height: 200px;
+    text-align: center;
+
+    p{
+        padding: 10px 0px;
+        color: rgb(100, 100, 100);
+    }
+}
+
+.cicle-img{
+    width: 150px;
+    margin: 0 auto;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgb(157, 36, 168);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img{
+        width: 120px;
+    }
+}
+
+#mt3{
+    img{
+        width: 100px;
+    }
+}
+
+section.text-three{
+    background-color: rgb(139, 43, 139);
+    color: #ccc;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.322);
+
+    a{
+        text-decoration: none;
+        color: #ccc;
+    }
+}
