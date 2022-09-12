@@ -216,8 +216,8 @@ footer.text a:hover {
     width: 100%;
     background-color: rgb(139, 43, 139);
     z-index: 999;
-    top: -300%;
-    transition: 1s ease;
+    top: -250%;
+    transition: .6s ease;
   }
   .nav-menu-mobile {
     list-style: none;
